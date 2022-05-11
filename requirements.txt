@@ -1,0 +1,10 @@
+flask-mongoengine==1.0.0
+mongoengine==0.24.1
+pymongo==4.1.1
+Flask-PyMongo==2.3.0
+Flask==2.1.2
+python-dotenv==0.20.0
+protobuf==3.20.1
+email-validator==1.2.1
+grpcio==1.46.0
+grpcio-tools==1.46.0
