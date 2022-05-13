@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+package flaskPoc;
+
+service userService { 
+  rpc createUser (userData) returns (messageResponse) {}
+  rpc getAllUsers () returns (stream userData) {}
+  rpc getUser (username) returns (userData) {} 
+  rpc updateUser (userData) returns (messageResponse)
+}
+
+message userData {
+  string username = 1;
+  string name = 2; 
+  string email = 3; 
+  string dateOfBirth = 4; 
+
+}
+
+message messageResponse {
+  string message = 1;
+} 
+
+message username {
+    string name = 1; 
+}
