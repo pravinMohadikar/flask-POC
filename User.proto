@@ -1,0 +1,46 @@
+
+syntax = "proto3";
+
+//import "google/protobuf/timestamp.proto";
+
+service User {
+
+    // RPC Insert Data
+    rpc Insert (InsertRequest) returns (StatusResponse) {}
+
+    rpc List (Empty) returns (stream DataResponse) {}
+
+    rpc Show (DataId) returns (DataResponse) {}
+
+    rpc Update (InsertRequest) returns (StatusResponse) {}
+
+    rpc Delete (DataId) returns (StatusResponse) {}
+}
+
+message InsertRequest {
+    string username = 1;
+    string name = 2;
+    string email = 3;
+    string dob = 4;
+//    google.protobuf.Timestamp created_at = 5;
+}
+
+message StatusResponse {
+    string message = 1;
+}
+
+message DataId {
+    string username = 1;
+}
+
+message Empty {
+
+}
+
+message DataResponse {
+    string username = 1;
+    string name = 2;
+    string email = 3;
+    string dob = 4;
+//    repeated google.protobuf.Timestamp created_at = 4;
+}
