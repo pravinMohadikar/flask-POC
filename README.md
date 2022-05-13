@@ -13,3 +13,9 @@ Python: 3.9
 
 ### Install dependencies
 pip install -r requirements.txt
+
+###GRPC CRUD Operations
+Run This command to start server side
+py start.py
+
+to run client side use postman.
