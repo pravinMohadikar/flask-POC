@@ -40,7 +40,7 @@ class CRUD(User_pb2_grpc.UserServicer):
     def List(self, request, context):
         employee = self.Connection()
 
-        employees = employee.find_all({})
+        employees = employee.find({})
 
         for data in employees:
             if data is not None:
